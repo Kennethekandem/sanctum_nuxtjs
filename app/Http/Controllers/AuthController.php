@@ -53,4 +53,14 @@ class AuthController extends Controller
             ]);
         }
     }
+
+    public function index() {
+
+        $users = User::all();
+
+        return response()->json([
+            'status_code' => 200,
+            'data' => $users,
+        ]);
+    }
 }
