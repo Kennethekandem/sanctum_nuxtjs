@@ -26,6 +26,8 @@ class AuthController extends Controller
             ]);
         }
 
+        $request->session()->regenerate();
+
         return response()->json([
             'status_code' => 201,
             'message' => 'User logged in'
